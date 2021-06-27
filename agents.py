@@ -80,7 +80,7 @@ class CloneAgent():
         self.dir_trained = dir_trained
         self.n_epochs = n_epochs
         self.n_demo_traj = n_demo_traj
-        self.optim = optim.SGD(params=policy.parameters(), lr=lr)
+        self.optim = optim.Adam(params=policy.parameters(), lr=lr)        
         self.states = None
         self.actions = None
         self.loss_history = []
